@@ -1,0 +1,6 @@
+{
+  "name": "Fit Planet Mobile Experience",
+  "description": "Next-gen athletic fitness prototype with interactive 3D arena visualizer, staged rhyme entrance, verified transformations, and live facility telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --color-brand-red: #FF2A3B;
+  --color-brand-red-dark: #D61626;
+  --color-brand-red-glow: rgba(255, 42, 59, 0.4);
+  --color-brand-obsidian: #0A0B0E;
+  --color-brand-surface: #111216;
+  --color-brand-surface-light: #16181D;
+  --color-brand-surface-high: #1E2028;
+  --color-brand-border: #23252E;
+  --color-brand-pearl: #F4F4F6;
+  --color-brand-muted: #9495A5;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0B0E;
+  color: #F4F4F6;
+  font-family: 'Inter', sans-serif;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Hide scrollbars globally while preserving smooth horizontal and vertical scrolling */
+::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tactile mobile press effect */
+.tap-press {
+  transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.12s ease;
+}
+.tap-press:active {
+  transform: scale(0.97);
+  opacity: 0.92;
+}
+
+/* Safe area insets */
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top, 0px), 0.5rem);
+}
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.75rem);
+}
+
+/* Glowing text and drop shadows */
+.text-glow-red {
+  text-shadow: 0 0 24px rgba(255, 42, 59, 0.6), 0 0 48px rgba(255, 42, 59, 0.3);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 30px rgba(255, 42, 59, 0.35), 0 0 10px rgba(255, 42, 59, 0.2);
+}
+
+.box-glow-red-lg {
+  box-shadow: 0 4px 28px rgba(255, 42, 59, 0.5), 0 0 60px rgba(255, 42, 59, 0.2);
+}
